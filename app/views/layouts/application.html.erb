@@ -10,9 +10,7 @@
   </head>
 
   <body>
-    <div class="">
-      <img src="<%= asset_path 'punta-lobs-1.jpg' %>" alt="" data-at2x="assets/img/punta-lobs-1.jpg">
-    </div>
+      <img class="img-fluid" src="<%= asset_path 'punta-lobs-1.jpg' %>" alt="" data-at2x="assets/img/punta-lobs-1.jpg">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <a class="navbar-brand" href="logo">ChildBrain</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,18 +28,27 @@
         </ul>
       </div>
     </nav>
-    <section>
-      <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-        <a href="#" class="list-group-item list-group-item-action list-group-item-primary">A simple primary list group item</a>
-        <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">A simple secondary list group item</a>
-        <a href="#" class="list-group-item list-group-item-action list-group-item-success">A simple success list group item</a>
-        <a href="#" class="list-group-item list-group-item-action list-group-item-danger">A simple danger list group item</a>
-        <a href="#" class="list-group-item list-group-item-action list-group-item-warning">A simple warning list group item</a>
-        <a href="#" class="list-group-item list-group-item-action list-group-item-info">A simple info list group item</a>
-        <a href="#" class="list-group-item list-group-item-action list-group-item-light">A simple light list group item</a>
-        <a href="#" class="list-group-item list-group-item-action list-group-item-dark">A simple dark list group item</a>
+    <div class="row">
+      <div class="col-sm-4 col-md-3 sidebar">
+        <div class="mini-submenu">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </div>
+        <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">Nosotros</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Mision</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Tú no estas solo</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-success">Como ayudar a un familiar</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-danger">Como ayudar a un amigo</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Preguntas Frecuentes</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-info">Colaboracion </a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-light">Contacto</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Noticias</a>
       </div>
-    </section>
+      </div>
+    </div>
+
+
   </body>
 </html>
