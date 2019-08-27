@@ -14,6 +14,7 @@ gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
+gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
@@ -27,7 +28,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'devise'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -37,6 +37,7 @@ gem 'devise'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootstrap', '>= 4.3.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

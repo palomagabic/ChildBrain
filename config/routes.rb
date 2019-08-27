@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :admins
+  devise_for :premia, controllers: {
+    registrations: 'premia/registrations'
+  }
+
   get 'pages/index'
+  resources :pages
   root 'pages#index'
-  get 'pages/signin'
-  get 'pages/signup'
+
   get 'pages/types'
   get 'pages/game'
   get 'pages/invitade'
