@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   }
 
   get 'pages/index'
-  resources :pages
   root 'pages#index'
 
   get 'pages/types'
