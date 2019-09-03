@@ -8,36 +8,43 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <%= render 'layouts/navbar' %>
-
   <body>
-    <%= yield %>
-    <div class="col-sm-4 col-md-3 sidenav">
-      <a id="clickbuttom" href=" <%=pages_game_path %>" class="list-group-item list-group-item-action">
-        <script type="text/javascript">
-         const juega = document.getElementById("clickbuttom");
-        funcion myButton("mousedown"){
-          if juega.addEventListener("mousedown"){
-            document.getElementById("clickbuttom").innerHTML =
-             "<button type="button" class="btn btn-danger"> ¡JUEGA! </button>";
-          }else{
-            document.getElementById("clickbuttom").innerHTML = " ¡JUEGA! ";
-          }
-        }
-
-        </script></a>
-
-      <a href="<%= pages_types_path %> " class="list-group-item list-group-item-action list-group-item-primary"> Instituciones </a>
-      <a href="#" class="list-group-item list-group-item-action list-group-item-secondary"> Random </a>
-      <a href="#" class="list-group-item list-group-item-action list-group-item-success">Nosotros</a>
-      <a href="#" class="list-group-item list-group-item-action list-group-item-danger">Mision</a>
-      <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Preguntas Frecuentes</a>
-      <a href="#" class="list-group-item list-group-item-action list-group-item-info">Colaboracion </a>
-      <a href="#" class="list-group-item list-group-item-action list-group-item-light">Contacto</a>
-      <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Noticias</a>
+    <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %> alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+      <%= value %>
     </div>
+    <% end %>
+    <section>
+      <div class="row">
+          <div class="col-sm-4 col-md-3 sidenav">
+            <a id="clickbuttom" href=" <%=pages_game_path %>" class="list-group-item list-group-item-action">
+              <script type="text/javascript">
+               const juega = document.getElementById("clickbuttom");
+              funcion myButton("mousedown"){
+                if juega.addEventListener("mousedown"){
+                  document.getElementById("clickbuttom").innerHTML =
+                   "<button type="button" class="btn btn-danger"> ¡JUEGA! </button>";
+                }else{
+                  document.getElementById("clickbuttom").innerHTML = " ¡JUEGA! ";
+                }
+              }
 
+              </script></a>
 
-
-
+            <a href="<%= pages_types_path %> " class="list-group-item list-group-item-action list-group-item-primary"> Instituciones </a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary"> Random </a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-success">Nosotros</a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-danger">Mision</a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Preguntas Frecuentes</a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-info">Colaboracion </a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-light">Contacto</a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Noticias</a>
+        </div>
+        <div class="col-md-6">
+          <%= yield %>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

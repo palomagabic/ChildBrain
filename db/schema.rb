@@ -15,11 +15,6 @@ ActiveRecord::Schema.define(version: 2019_08_29_015100) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "Estado", id: false, force: :cascade do |t|
-    t.integer "id_estado", null: false
-    t.text "Tipo", null: false
-  end
-
   create_table "Faqs", id: false, force: :cascade do |t|
     t.text "Pregunta", null: false
     t.text "Respuesta", null: false
@@ -33,11 +28,6 @@ ActiveRecord::Schema.define(version: 2019_08_29_015100) do
     t.xml "route"
     t.datetime "date_init", null: false
     t.boolean "active", null: false
-    t.text "name", null: false
-  end
-
-  create_table "Instituciones", id: false, force: :cascade do |t|
-    t.serial "id_institucion", null: false
     t.text "name", null: false
   end
 

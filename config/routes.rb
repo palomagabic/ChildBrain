@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :premia, controllers: {
-    registrations: 'premia/registrations'
-  }
+  devise_for :premium
 
   get 'pages/index'
   root 'pages#index'
