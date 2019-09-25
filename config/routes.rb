@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :premium
+  devise_for :users
 
   get 'pages/index'
   root 'pages#index'

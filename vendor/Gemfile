@@ -36,7 +36,7 @@ gem 'jquery'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootsnap', '~> 1.4', '>= 1.4.5'
 gem 'bootstrap', '>=4.3.1'
 gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
 

@@ -7,17 +7,17 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link"> <% if signed_in? %></a>
+        <a class="nav-link"> <% if user_signed_in? %></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%= destroy_premium_session_path%>">Salir</a>
+        <%= link_to "Salir", destroy_user_session_path%>
       </li>
       <% else %>
       <li class="nav-item">
-        <a class="nav-link" href="<%= new_premium_registration_path%>">Registrarse</a>
+        <%= link_to "Registrarse", new_user_registration_path%>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%= premium_session_path%>">Ingresar</a>
+        <%= link_to "Ingresar", new_user_session_path%>
       </li>
       <% end %>
     </ul>

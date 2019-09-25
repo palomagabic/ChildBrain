@@ -12,7 +12,7 @@ end
 class Player < Chingu::GameObject
   def initialize(options = {})
     super
-    @image = Image["spaceship.png"]
+    @image = Image["flame.png"]
   end
 
   def holding_left; @x += 3; end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_29_015100) do
+ActiveRecord::Schema.define(version: 2019_09_25_224706) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,17 +18,6 @@ ActiveRecord::Schema.define(version: 2019_08_29_015100) do
   create_table "Faqs", id: false, force: :cascade do |t|
     t.text "Pregunta", null: false
     t.text "Respuesta", null: false
-  end
-
-  create_table "Game", id: false, force: :cascade do |t|
-    t.serial "id_game", null: false
-    t.text "description"
-    t.bigint "n_ejecuciones", null: false
-    t.text "type", null: false
-    t.xml "route"
-    t.datetime "date_init", null: false
-    t.boolean "active", null: false
-    t.text "name", null: false
   end
 
   create_table "Nivel", id: false, force: :cascade do |t|
@@ -68,7 +57,8 @@ ActiveRecord::Schema.define(version: 2019_08_29_015100) do
     t.text "extract", null: false
   end
 
-  create_table "premia", force: :cascade do |t|
+
+  create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -76,12 +66,8 @@ ActiveRecord::Schema.define(version: 2019_08_29_015100) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "name", null: false
-    t.json "photo"
-    t.text "institucion", null: false
-    t.datetime "activation_day", null: false
-    t.index ["email"], name: "index_premia_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_premia_on_reset_password_token", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end
