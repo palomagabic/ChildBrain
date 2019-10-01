@@ -10,7 +10,9 @@
         <a class="nav-link"> <% if user_signed_in? %></a>
       </li>
       <li class="nav-item">
-        <%= link_to "Salir", destroy_user_session_path%>
+        <%= link_to destroy_user_session_path, method: :delete do %>
+        <li>Salir</li>
+        <% end %>
       </li>
       <% else %>
       <li class="nav-item">

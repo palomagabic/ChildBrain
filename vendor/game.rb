@@ -27,7 +27,7 @@ end
 class Bullet < Chingu::GameObject
   def initialize(options = {})
     super
-    @image = Image["fire_bullet.png"]
+    @image = Image["flame.png"]
   end
 
   def update
