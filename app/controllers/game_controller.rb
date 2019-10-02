@@ -1,11 +1,8 @@
-require 'gosu'
+class GamesController < ApplicationController
 
-class GameWindow < Gosu::Window
-  def initialize
-    super 640, 480, false
-    self.caption = "Mi primer juego"
-  end
+
+
+
+
+
 end
-
-window = GameWindow.new
-window.show
