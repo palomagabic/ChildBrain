@@ -15,8 +15,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
-gem 'gosu'
-# gem 'chingu', '~> 0.8.1'
+#gem 'gosu'
+#gem 'chingu', '~> 0.8.1'
 gem 'cancancan'
 
 # Use CoffeeScript for .coffee assets and views
