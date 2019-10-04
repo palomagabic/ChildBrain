@@ -10,18 +10,15 @@
         <a class="nav-link"> <% if user_signed_in? %></a>
       </li>
       <li class="nav-item">
-        <%= link_to destroy_user_session_path, method: :delete do %>
-        <li>Salir</li>
-        <% end %>
+        <a class="nav-link" href="<%= destroy_user_session_path, method: :delete do %>">Salir</a>
       </li>
       <% else %>
       <li class="nav-item">
-        <%= link_to "Registrarse", new_user_registration_path%>
+        <a class="nav-link" href="<%= new_user_registration_path%>">Registrarse</a>
       </li>
       <li class="nav-item">
-        <%= link_to "Ingresar", new_user_session_path%>
+        <a class="nav-link" href="<%= new_user_session_path%>">Ingresar</a>
       </li>
-      <% end %>
     </ul>
   </div>
 </nav>
