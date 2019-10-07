@@ -40,7 +40,7 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '~> 1.4', '>= 1.4.5'
-gem 'bootstrap', '>=4.3.1'
+gem 'bootstrap', '~> 4.3.1'
 gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
 
 group :development, :test do
