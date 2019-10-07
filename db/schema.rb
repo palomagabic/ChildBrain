@@ -15,11 +15,6 @@ ActiveRecord::Schema.define(version: 2019_09_25_224706) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "Faqs", id: false, force: :cascade do |t|
-    t.text "Pregunta", null: false
-    t.text "Respuesta", null: false
-  end
-
   create_table "Nivel", id: false, force: :cascade do |t|
     t.integer "id_nivel", null: false
     t.text "Tipo", null: false
@@ -56,7 +51,6 @@ ActiveRecord::Schema.define(version: 2019_09_25_224706) do
     t.text "text", null: false
     t.text "extract", null: false
   end
-
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

@@ -10,20 +10,23 @@
         <a class="nav-link"> <% if user_signed_in? %></a>
       </li>
       <li class="nav-item">
+<<<<<<< HEAD
         <a class="nav-link">
         <%= link_to destroy_user_session_path, method: :delete do %>
         Salir
         <% end %>
         </a>
+=======
+        <a class="nav-link" href="<%= destroy_user_session_path, method: :delete do %>">Salir</a>
+>>>>>>> 6d8992de7e1b752d9a2031708705639308bc720e
       </li>
       <% else %>
       <li class="nav-item">
-        <%= link_to "Registrarse", new_user_registration_path%>
+        <a class="nav-link" href="<%= new_user_registration_path%>">Registrarse</a>
       </li>
       <li class="nav-item">
-        <%= link_to "Ingresar", new_user_session_path%>
+        <a class="nav-link" href="<%= new_user_session_path%>">Ingresar</a>
       </li>
-      <% end %>
     </ul>
   </div>
 </nav>
