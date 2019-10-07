@@ -10,15 +10,12 @@
         <a class="nav-link"> <% if user_signed_in? %></a>
       </li>
       <li class="nav-item">
-<<<<<<< HEAD
         <a class="nav-link">
         <%= link_to destroy_user_session_path, method: :delete do %>
         Salir
         <% end %>
         </a>
-=======
-        <a class="nav-link" href="<%= destroy_user_session_path, method: :delete do %>">Salir</a>
->>>>>>> 6d8992de7e1b752d9a2031708705639308bc720e
+        <a class="nav-link" href="<%= link_to destroy_user_session_path, method: :delete %>">Salir</a>
       </li>
       <% else %>
       <li class="nav-item">
@@ -27,6 +24,7 @@
       <li class="nav-item">
         <a class="nav-link" href="<%= new_user_session_path%>">Ingresar</a>
       </li>
+      <% end %>
     </ul>
   </div>
 </nav>
