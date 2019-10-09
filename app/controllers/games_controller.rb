@@ -71,9 +71,4 @@ class GamesController < ApplicationController
     def game_params
       params.require(:game).permit(:name, :description, :execution, :type, :route, :available, :creation)
     end
-
-
-
-
-
 end

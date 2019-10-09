@@ -4,11 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  ROLES = {0 => :guest, 1 => :user, 2 => :moderator, 3 => :admin}
+   geocoded_by :address
+   after_validation :geocode
 
-  attr_reader :role
-
-  def role?(role_name)
-    role == role_name
-  end
+   enum role: [:admin, :holder, :teacher, :student]
+   
 end

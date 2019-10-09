@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ChildBrain</title>
+    <title>Mente pequeña</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <%= render 'layouts/navbar' %>
+
   <body>
+    <%= render 'layouts/navbar' %>
     <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %> alert-dismissable">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -18,26 +20,15 @@
     <section>
       <div class="row">
           <div class="col-sm-4 col-md-3 sidenav">
-            <a id="clickbuttom" href=" <%=pages_game_path %>" class="list-group-item list-group-item-action">
-              <script type="text/javascript">
-               const juega = document.getElementById("clickbuttom");
-              funcion myButton("mousedown"){
-                if juega.addEventListener("mousedown"){
-                  document.getElementById("clickbuttom").innerHTML =
-                   "<button type="button" class="btn btn-danger"> ¡JUEGA! </button>";
-                }else{
-                  document.getElementById("clickbuttom").innerHTML = " ¡JUEGA! ";
-                }
-              }
-
-              </script></a>
-
-            <a href="<%= pages_types_path %> " class="list-group-item list-group-item-action list-group-item-primary"> Instituciones </a>
+            <a id="clickbuttom" href=" <%=games_path %>" class="list-group-item list-group-item-action">
+             ¡JUEGA!
+              </a>
+            <a href="<%= pages_type_path %> " class="list-group-item list-group-item-action list-group-item-primary"> Instituciones </a>
             <a href="#" class="list-group-item list-group-item-action list-group-item-secondary"> Random </a>
             <a href="#" class="list-group-item list-group-item-action list-group-item-success">Nosotros</a>
             <a href="#" class="list-group-item list-group-item-action list-group-item-danger">Mision</a>
             <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Preguntas Frecuentes</a>
-            <a href=" <%= pages_clients_path %>" class="list-group-item list-group-item-action list-group-item-info">Colaboracion </a>
+            <a href=" <%= pages_client_path %>" class="list-group-item list-group-item-action list-group-item-info">Colaboracion </a>
             <a href=" <%= pages_contact_path %>" class="list-group-item list-group-item-action list-group-item-light">Contacto</a>
             <a href=" <%= pages_new_path %> " class="list-group-item list-group-item-action list-group-item-dark">Noticias</a>
         </div>
@@ -45,6 +36,9 @@
           <%= yield %>
         </div>
       </div>
+      <footer class="container-fluid bg-primary text-white p-5">
+         <a href="https://github.com/palomagabic" class="text-white"><i class="fab fa-github fa-3x" data-toggle="tooltip" data-placement="left" title="Github"></i></a>
+         Creado por Paloma Cortes Lazo</footer>
     </section>
   </body>
 </html>

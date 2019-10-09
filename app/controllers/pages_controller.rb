@@ -1,15 +1,20 @@
 class PagesController < ApplicationController
-
   def index
   end
 
-  def types
-
+  def client
   end
 
-  def game
+  def contact
   end
 
   def invitade
+  end
+
+  def new
+  end
+
+  def type
+    @Institutions = Institution.all
   end
 end
